@@ -2,13 +2,19 @@ module System
 	class Job
 		attr_reader :name, :dependency
 
-		def initialize(name, dependency=nil)
+		def initialize(name)
 			@name = name
-			@dependency = dependency
+			@dependency = NilJob.new
 		end
 
-		def depends_on(value)
-			@dependency = value
-		end
-	end
+		def depends_on(job)
+			@dependency = job
+    end
+
+    def ready
+      #do something
+      return self
+    end
+
+  end
 end

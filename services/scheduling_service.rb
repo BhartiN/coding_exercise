@@ -18,7 +18,7 @@ module System
       @schedulers[job.name] ||= Scheduler.new(job)
     end
 
-    def get_executed_jobs
+    def print_executed_jobs
       puts 'Order of scheduling is: '
       @scheduled_jobs.each do |job|
         print "#{job.name} "

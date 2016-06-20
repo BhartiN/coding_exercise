@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe System::Job do
+describe System::NilJob do
   let(:nil_job) { System::NilJob.new }
 
   context 'create' do

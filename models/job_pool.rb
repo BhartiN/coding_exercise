@@ -20,10 +20,9 @@ module System
         @jobs_map.values.each do |job|
           enqueue(job)
         end
-        get_executed_jobs
+        print_executed_jobs
       rescue Exception => e
-        print 'Cyclic dependency detected in jobs input' and exit(true)
-        exit(false)
+        print 'Cyclic dependency detected in jobs input'
       end
     end
 
